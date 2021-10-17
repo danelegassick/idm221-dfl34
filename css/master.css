@@ -1,0 +1,47 @@
+/* site colors: 
+#FFFFFF (WHITE), 
+#1D1D1B (BLACK), 
+#28E425 (GREEN), 
+#6622CC (PURPLE), 
+#D6D6D6 (LIGHT GREY) */
+
+h1 {
+    color: #1D1D1B;
+    font-family: Helvetica, sans-serif;
+}
+
+h2 {
+    color: #1D1D1B;
+}
+
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    color: #1D1D1B;
+    padding: 10px;
+}
+
+header {
+    margin: 10px auto 10px auto;
+}
+
+.table {
+    display: table;
+}
+
+.tableRow {
+    display: table-row;
+}
+
+.block {
+    display: table-cell;
+}
+
+.container {
+    margin: 10px auto 10px auto;
+}
+
+.headerProjects {
+    margin-left: auto;
+    margin-right: auto;
+}
+
