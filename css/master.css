@@ -17,27 +17,90 @@ h2 {
 body {
     font-family: Helvetica, Arial, sans-serif;
     color: #1D1D1B;
-    padding: 10px;
+    padding: 0px;
 }
 
 header {
-    margin: 10px auto 10px auto;
+    background-color: #D6D6D6;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    margin-bottom: 0px;
 }
 
+
+/*
 .table {
-    display: table;
+    display: flex;
 }
 
 .tableRow {
-    display: table-row;
+    display: flex;
+    display: ;
 }
 
 .block {
-    display: table-cell;
+    display: auto auto;
+}
+*/
+
+
+.block1 {
+    background: none;
+    grid-area: content1;
+}
+
+.block2 {
+    background: none;
+    grid-area: content2;
+}
+
+.block3 {
+    background: none;
+    grid-area: content3;
+}
+
+.block4 {
+    background: none;
+    grid-area: content4;
+}
+
+.block5 {
+    background: none;
+    grid-area: content5;
+}
+
+.block6 {
+    background: none;
+    grid-area: content6;
+}
+
+
+.grid {
+    display: grid;
+    height: 75vh;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "content1 content2 content3"
+    "content4 content5 content6";
+    gap: 10px;
+
+    
 }
 
 .container {
-    margin: 10px auto 10px auto;
+    text-align: center;
+}
+
+.container li {
+    display: inline;
+    margin: auto 10px auto 10px;
+}
+
+.container h1 {
+    margin-left: 30px;
+    margin-right: auto;
+ 
 }
 
 .headerProjects {
@@ -45,3 +108,47 @@ header {
     margin-right: auto;
 }
 
+figure {
+    align-content: center;
+    text-align: center;
+}
+
+figcaption {
+    text-align: left;
+}
+
+.projectIcon {
+    width: 400px;
+    height: auto;
+}
+
+@media only screen and (max-width:1600px){
+    
+    .grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas: 
+        "content1 content2"
+        "content3 content4"
+        "content5 content6";
+    }
+    
+
+}
+
+@media only screen and (max-width:1000px){
+    
+    .grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas: 
+        "content1"
+        "content2"
+        "content3"
+        "content4"
+        "content5"
+        "content6";
+    }
+    
+
+}
