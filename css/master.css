@@ -18,6 +18,7 @@ body {
     font-family: Helvetica, Arial, sans-serif;
     color: #1D1D1B;
     padding: 0px;
+    line-height: 1.75rem;
 }
 
 header {
@@ -27,51 +28,72 @@ header {
     margin-bottom: 0px;
 }
 
-
-/*
-.table {
-    display: flex;
+br {
+    color: #1D1D1B;
 }
 
-.tableRow {
-    display: flex;
-    display: ;
-}
-
-.block {
-    display: auto auto;
-}
-*/
-
+.preload {
+    animation-duration: 0s !important;
+    animation-name: out;
+    -webkit-animation-duration: 0s !important;
+    transition:background-color 0s, opacity 0s, color 0s, width 0s, height 0s, padding 0s, margin 0s !important;}
 
 .block1 {
     background: none;
     grid-area: content1;
+    padding: 10px;
 }
 
 .block2 {
     background: none;
     grid-area: content2;
+    padding: 10px;
 }
 
 .block3 {
     background: none;
     grid-area: content3;
+    padding: 10px;
 }
 
 .block4 {
     background: none;
     grid-area: content4;
+    padding: 10px;
 }
 
 .block5 {
     background: none;
     grid-area: content5;
+    padding: 10px;
 }
 
 .block6 {
     background: none;
     grid-area: content6;
+    padding: 10px;
+}
+
+@keyframes in {
+    from {border: 0px solid #28E425;}
+    to {border: 20px solid #28E425;}
+  }
+
+  @keyframes out {
+    from {border: 20px solid #28E425;}
+    to {border: 0px solid #28E425;}
+  }
+
+.grid div {
+    border: 0px solid white;
+    animation-name: out;
+    animation-duration: .5s;
+}
+
+.grid div:hover {
+    animation-name: in;
+    animation-duration: .5s;
+    border: 20px solid #28E425;
 }
 
 
@@ -83,10 +105,9 @@ header {
     grid-template-areas: 
     "content1 content2 content3"
     "content4 content5 content6";
-    gap: 10px;
-
-    
+    gap: 0px;
 }
+
 
 .container {
     text-align: center;
@@ -118,8 +139,8 @@ figcaption {
 }
 
 .projectIcon {
-    width: 400px;
-    height: auto;
+    width: auto;
+    height: 150px;
 }
 
 @media only screen and (max-width:1600px){
@@ -136,7 +157,7 @@ figcaption {
 
 }
 
-@media only screen and (max-width:1000px){
+@media only screen and (max-width:1161px){
     
     .grid {
         grid-template-columns: 1fr;
@@ -151,4 +172,108 @@ figcaption {
     }
     
 
+}
+
+.layout-structure {
+    margin: 10px;
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+   /* grid-template-rows: 1fr 1fr 1fr 1fr 1fr; */
+    grid-template-areas:
+    "sidebar text-structure text-structure filler1 filler1"
+    "sidebar text-structure text-structure filler1 filler1"
+    "sidebar text-structure text-structure filler1 filler1"
+    "sidebar filler2 filler2 filler3 filler3"
+    "sidebar filler2 filler2 filler3 filler3";
+    gap: 10px;
+}
+
+.sidebar {
+    background: #5c5c5c;
+    grid-area: sidebar;
+    padding: 10px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    text-decoration: none;
+}
+
+.sidebar a:link {
+    text-decoration: none;
+    color: white;
+}
+
+.sidebar a:visited {
+    color: white;
+}
+
+
+.text-structure {
+
+    grid-area: text-structure;
+    padding: 10px;
+}
+
+.filler1 {
+    grid-area: filler1;
+    padding: 10px;
+}
+
+.filler1 img {
+    width: auto;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.filler2 {
+    grid-area: filler2;
+    padding: 10px;
+}
+
+.filler2 img {
+    width: auto;
+    max-width: 100%;
+    max-height: 900px;
+}
+
+.filler3 {
+    grid-area: filler3;
+    padding: 10px;
+}
+
+
+.project-header {
+    width: 500px;
+    height:auto;
+}
+
+.button {
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #1D1D1B;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 9px #999;
+}
+
+.button:hover {
+    background-color: #1D1D1B;
+}
+
+.button:active {
+    background-color: #1D1D1B;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+.menu ul {
+    display: inline;
 }
