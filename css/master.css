@@ -4,9 +4,10 @@
 #28E425 (GREEN), 
 #6622CC (PURPLE), 
 #D6D6D6 (LIGHT GREY) */
-html {
+html, body {
     margin: 0;
     padding: 0;
+    background: radial-gradient( rgb(255, 255, 255) 0%, rgb(250, 250, 250) 35%, rgb(220, 220, 220) 100%);;
 }
 
 h1 {
@@ -21,9 +22,8 @@ h2 {
 }
 
 h3 {
-    margin-top: 0;
+    margin: 0;
 }
-
 
 body {
     font-family: Helvetica, Arial, sans-serif;
@@ -35,17 +35,17 @@ body {
 /* navigation styles*/
 
 header {
-    background: rgb(80,0,51);
-    background: linear-gradient(90deg, rgba(80,0,51,1) 0%, rgba(168,0,85,1) 35%, rgba(255,0,119,1) 100%);
+    background: rgb(247, 247, 247);
     text-align: center;
     width: 100%;
     position: fixed;
     z-index: 999;
-    color: white;
+    color: #1D1D1B;
+    box-shadow: 0px 5px 5px #2b2b2b74;
 }
 
 header h1{
-    color: white;
+    color: #1D1D1B;
 }
 
 nav {
@@ -53,8 +53,7 @@ nav {
     text-align: left;
     top: 100%;
     left: 0;
-    background: rgb(80,0,51);
-    background: linear-gradient(90deg, rgba(80,0,51,1) 0%, rgba(168,0,85,1) 35%, rgba(255,0,119,1) 100%);
+    background: rgb(247, 247, 247);
     width: 100%;
     transform: scale(1,0);
     transform-origin: top;
@@ -73,7 +72,7 @@ nav li {
 }
 
 nav a {
-    color: white;
+    color: #1D1D1B;
     text-decoration: none;
     font-size: 1.2rem;
     text-transform: uppercase;
@@ -81,7 +80,8 @@ nav a {
 }
 
 nav a:hover {
-    color: black;
+    font-weight:bold;
+    transition: font-weight 220ms ease-in-out;
 }
 
 .nav-toggle {
@@ -111,10 +111,10 @@ nav a:hover {
 .nav-toggle-label span::before,
 .nav-toggle-label span::after {
     display: block;
-    background: white;
-    height: 2px;
+    background: #1D1D1B;
+    height: 3px;
     width: 2rem;
-    border-radius: 2px;
+    border-radius: 4px;
     position: relative;
 }
 
@@ -132,109 +132,98 @@ nav a:hover {
     top: 7px;
 }
 
+/* END OF NAVIGATION*/
 
+/*GRID PROJECTS*/
+
+.projects {
+    grid-area: projects;
+    background: rgb(0,0,0);
+    background: linear-gradient(45deg, rgba(0,0,0,1) 0%, rgba(36,36,36,1) 35%, rgba(56,56,56,1) 100%);
+    border-radius: 1rem;
+    box-shadow: 5px 5px 5px#2b2b2b79;
+    padding: 1rem;
+    text-align: center;
+}
+
+.projects h1 {
+    font-size: 4rem;
+    color: white;
+}
+
+.projects p{
+    font-size: 1.25rem;
+    font-weight: normal;
+    color: white;
+}
 
 
 .block1 {
     background: none;
     grid-area: content1;
+    width: 100%;
 }
 
 .block2 {
     background: none;
     grid-area: content2;
+    width: 100%;
 }
 
 .block3 {
     background: none;
     grid-area: content3;
+    width: 100%;
 }
 
 .block4 {
     background: none;
     grid-area: content4;
+    width: 100%;
 }
 
 .block5 {
     background: none;
     grid-area: content5;
+    width: 100%;
 }
 
 .block6 {
     background: none;
     grid-area: content6;
+    width: 100%;
 }
-
-/*@keyframes in {
-    from {border: 0px solid #28E425;}
-    to {border: 20px solid #28E425;}
-  }
-
-  @keyframes out {
-    from {border: 20px solid #28E425;}
-    to {border: 0px solid #28E425;}
-  }*/
 
 .grid div {
     border: 0px solid white;
 }
 
-
-
 .grid {
     display: grid;
-    grid-template-columns: 1fr*6;
-    grid-template-areas: 
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+    "projects projects projects projects projects projects" 
     "content1 content2 content3 content4 content5 content6";
     gap: 1rem;
-    margin: 2rem 5rem;
+    margin: 0rem 5rem;
+    padding-top: 6rem;
 }
 
-
-.container {
-    text-align: center;
-}
-
-.container li {
-    display: inline;
-    margin: auto 10px auto 10px;
-}
-
-.container h1 {
-    margin-left: 30px;
-    margin-right: auto;
- 
-}
-
-.headerProjects {
-    margin-left: auto;
-    margin-right: auto;
-}
-
-figure {
-    align-content: center;
-    text-align: center;
-}
-
-figcaption {
-    text-align: left;
-}
-
-.projectIcon {
-    width: auto;
-    height: 150px;
-}
 
 @media only screen and (max-width:1600px){
     
     .grid {
         grid-template-columns: 1fr 1fr;
-        grid-template-areas: 
+        grid-template-areas:
+        "projects projects" 
         "content1 content2"
         "content3 content4"
         "content5 content6";
     }
     
+    .grid div {
+        height: auto;
+    }
 
 }
 
@@ -243,6 +232,7 @@ figcaption {
     .grid {
         grid-template-columns: 1fr;
         grid-template-areas: 
+        "projects"
         "content1"
         "content2"
         "content3"
@@ -251,8 +241,15 @@ figcaption {
         "content6";
     }
     
+    .grid div {
+        height: auto;
+    }
 
 }
+
+/*END OF PROJECT GRID*/
+
+
 
 .layout-structure {
     display: grid;
@@ -418,6 +415,7 @@ figcaption {
     border-radius: 1rem;
     overflow: hidden;
     transition: transform 500ms ease;
+    box-shadow: 5px 5px 5px#2b2b2b79;
 }
 
 .card:hover, .card:focus-within{
@@ -466,6 +464,10 @@ figcaption {
 
 .card:hover .card-title::after {
     transform: scaleX(1);
+}
+
+.card-body {
+    height: 8rem;
 }
 /*
 .button1 {
