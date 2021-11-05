@@ -1,0 +1,14 @@
+html {
+    background-color: #500033;
+}
+
+.sidebar {
+    background-color: #FF0077;
+}
+
+.text-container {
+    border: solid 2px #FF0077;
+    border-radius: 1rem;
+    background-color: #ff0077;
+    padding: 1.5rem
+}

@@ -4,6 +4,10 @@
 #28E425 (GREEN), 
 #6622CC (PURPLE), 
 #D6D6D6 (LIGHT GREY) */
+html {
+    margin: 0;
+    padding: 0;
+}
 
 h1 {
     color: #1D1D1B;
@@ -12,7 +16,14 @@ h1 {
 
 h2 {
     color: #1D1D1B;
+    margin: 0;
+
 }
+
+h3 {
+    margin-top: 0;
+}
+
 
 body {
     font-family: Helvetica, Arial, sans-serif;
@@ -21,60 +32,140 @@ body {
     line-height: 1.75rem;
 }
 
+/* navigation styles*/
+
 header {
-    background-color: #D6D6D6;
-    padding-bottom: 30px;
-    padding-top: 30px;
-    margin-bottom: 0px;
+    background: rgb(80,0,51);
+    background: linear-gradient(90deg, rgba(80,0,51,1) 0%, rgba(168,0,85,1) 35%, rgba(255,0,119,1) 100%);
+    text-align: center;
+    width: 100%;
+    position: fixed;
+    z-index: 999;
+    color: white;
 }
 
-br {
-    color: #1D1D1B;
+header h1{
+    color: white;
 }
 
-.preload {
-    animation-duration: 0s !important;
-    animation-name: out;
-    -webkit-animation-duration: 0s !important;
-    transition:background-color 0s, opacity 0s, color 0s, width 0s, height 0s, padding 0s, margin 0s !important;}
+nav {
+    position: absolute;
+    text-align: left;
+    top: 100%;
+    left: 0;
+    background: rgb(80,0,51);
+    background: linear-gradient(90deg, rgba(80,0,51,1) 0%, rgba(168,0,85,1) 35%, rgba(255,0,119,1) 100%);
+    width: 100%;
+    transform: scale(1,0);
+    transform-origin: top;
+    transition: transform 500ms ease-in-out;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav li {
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    opacity: 0;
+}
+
+nav a:hover {
+    color: black;
+}
+
+.nav-toggle {
+    display: none;
+}
+
+.nav-toggle:checked ~ nav {
+    transform: scale(1,1);
+}
+
+.nav-toggle:checked ~ nav a{
+    opacity: 1;
+    transition: opacity 150ms ease-in-out;
+}
+
+.nav-toggle-label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: 1rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+    display: block;
+    background: white;
+    height: 2px;
+    width: 2rem;
+    border-radius: 2px;
+    position: relative;
+}
+
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+    content: '';
+    position: absolute;
+}
+
+.nav-toggle-label span::before{
+    bottom: 7px;
+}
+
+.nav-toggle-label span::after {
+    top: 7px;
+}
+
+
+
 
 .block1 {
     background: none;
     grid-area: content1;
-    padding: 10px;
 }
 
 .block2 {
     background: none;
     grid-area: content2;
-    padding: 10px;
 }
 
 .block3 {
     background: none;
     grid-area: content3;
-    padding: 10px;
 }
 
 .block4 {
     background: none;
     grid-area: content4;
-    padding: 10px;
 }
 
 .block5 {
     background: none;
     grid-area: content5;
-    padding: 10px;
 }
 
 .block6 {
     background: none;
     grid-area: content6;
-    padding: 10px;
 }
 
-@keyframes in {
+/*@keyframes in {
     from {border: 0px solid #28E425;}
     to {border: 20px solid #28E425;}
   }
@@ -82,30 +173,21 @@ br {
   @keyframes out {
     from {border: 20px solid #28E425;}
     to {border: 0px solid #28E425;}
-  }
+  }*/
 
 .grid div {
     border: 0px solid white;
-    animation-name: out;
-    animation-duration: .5s;
 }
 
-.grid div:hover {
-    animation-name: in;
-    animation-duration: .5s;
-    border: 20px solid #28E425;
-}
 
 
 .grid {
     display: grid;
-    height: 75vh;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr*6;
     grid-template-areas: 
-    "content1 content2 content3"
-    "content4 content5 content6";
-    gap: 0px;
+    "content1 content2 content3 content4 content5 content6";
+    gap: 1rem;
+    margin: 2rem 5rem;
 }
 
 
@@ -147,7 +229,6 @@ figcaption {
     
     .grid {
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
         grid-template-areas: 
         "content1 content2"
         "content3 content4"
@@ -157,11 +238,10 @@ figcaption {
 
 }
 
-@media only screen and (max-width:1161px){
+@media only screen and (max-width:980px){
     
     .grid {
         grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
         grid-template-areas: 
         "content1"
         "content2"
@@ -175,7 +255,6 @@ figcaption {
 }
 
 .layout-structure {
-    margin: 10px;
     display: grid;
     height: 100vh;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
@@ -186,13 +265,24 @@ figcaption {
     "sidebar text-structure text-structure filler1 filler1"
     "sidebar filler2 filler2 filler3 filler3"
     "sidebar filler2 filler2 filler3 filler3";
-    gap: 10px;
+    gap: 10px; 
+    margin: 0;
+    color: #ffffff;
+}
+
+.layout-structure h1, h2, h3, h4 {
+    color:#ffffff;
 }
 
 .sidebar {
-    background: #5c5c5c;
+    background: #2b2b2b;
     grid-area: sidebar;
-    padding: 10px;
+    padding: 3rem;
+    position: fixed;
+    max-height: 100%;
+    width: 14%;
+    font-size: 1em;
+    border-radius: .5rem;
 }
 
 .sidebar ul {
@@ -200,25 +290,52 @@ figcaption {
     text-decoration: none;
 }
 
+.sidebar li {
+    text-align: left;
+    border-bottom: solid 2px #dcdcdc;;
+    margin-top: 1rem;
+}
+
 .sidebar a:link {
     text-decoration: none;
-    color: white;
+    color: #ffffff;
 }
 
 .sidebar a:visited {
-    color: white;
+    color: #ffffff;
 }
 
+.sidebar a:hover {
+    color: #28E425;
+}
+
+.sidebar-name {
+    text-align: center;
+    padding-bottom: 1rem;
+    margin:  1rem;
+    border-bottom: 1px solid #ffffff;
+}
+
+.sidebar h3 {
+    color:#D6D6D6;
+
+}
+
+.sidebar h2 {
+    color:#D6D6D6;
+}
 
 .text-structure {
-
     grid-area: text-structure;
-    padding: 10px;
+    padding: 1.5rem;
+    border-radius: 5rem;
 }
 
 .filler1 {
     grid-area: filler1;
-    padding: 10px;
+    padding: 1.5rem;
+    display: grid;
+    grid-template-rows: 25%*4;
 }
 
 .filler1 img {
@@ -227,20 +344,31 @@ figcaption {
     max-height: 100%;
 }
 
+.text-container {
+    border: solid 2px #1D1D1B;
+    border-radius: 1rem;
+    background-color: #f2f2f2;
+    padding: 1.5rem
+    
+}
+
 .filler2 {
     grid-area: filler2;
-    padding: 10px;
+    padding: 1.5rem;
+    display: grid;
+    grid-template-rows: 14.28%*7;
 }
 
 .filler2 img {
     width: auto;
     max-width: 100%;
     max-height: 900px;
+
 }
 
 .filler3 {
     grid-area: filler3;
-    padding: 10px;
+    padding: 1.5rem;
 }
 
 
@@ -276,4 +404,229 @@ figcaption {
 
 .menu ul {
     display: inline;
+}
+
+/* CARD TEST CSS FOR SLEAK MODERN GRADIENT PLUS ANIMATIONS*/
+
+.card {
+    color: white;
+    /*background: rgb(80,0,51);
+    background: linear-gradient(45deg, rgba(80,0,51,1) 0%, rgba(168,0,85,1) 35%, rgba(255,0,119,1) 100%);*/
+    background-size: cover;
+    padding: 8rem 0 0;
+    max-width: 100%;
+    border-radius: 1rem;
+    overflow: hidden;
+    transition: transform 500ms ease;
+}
+
+.card:hover, .card:focus-within{
+    transform: scale(1.03);
+}
+
+.card-content {
+    padding: 1.5rem;
+    background: linear-gradient(rgba(0, 0, 0, 0),rgba(0, 0, 0, 1));
+    transform: translateY(75%);
+
+    transition: transform 500ms ease
+}
+
+.card-content > *:not(.card-title){
+    opacity: 0;
+    transition: opacity 500ms linear;
+}
+
+.card:hover .card-content, .card:focus-within .card-content {
+    transform: translateY(0);
+    transition-delay: 300ms;
+}
+
+.card:hover .card-content > *{
+    opacity: 100%;
+}
+
+.card-title {
+    position:relative;
+    width: max-content;
+}
+
+.card-title::after {
+    content: "";
+    position:absolute;
+    height: 3px;
+    width:100%;
+    background-color: white;
+    left: 0;
+    bottom: -5px;
+    transform: scaleX(0);
+
+    transition: transform 500ms ease;
+}
+
+.card:hover .card-title::after {
+    transform: scaleX(1);
+}
+/*
+.button1 {
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+    /*color: white;
+    background:linear-gradient(45deg, rgba(255,0,119,1) 100%, rgba(168,0,85,1) 35%, rgba(80,0,51,1) 0%);
+    padding: 0.5rem 1.25rem;
+    border-radius: .25rem;
+}
+
+.button1:hover, button1:focus {
+    color: rgba(255,0,119,1);
+    background: white;
+}*/
+
+@media (hover) {
+    .card-content {
+        transform: translateY(70%);
+        transition: transform 500ms ease;
+    }
+
+    .card-content > *:not(.card-title){
+        opacity: 0;
+        transition: opacity 500ms linear;
+    }
+
+    .card:hover .card-content, .card:focus-within .card-content {
+        transform: translateY(0);
+        transition-delay: 300ms;
+    }
+
+    .card:focus-within .card-content {
+        transition-duration: 0ms;
+    }
+
+    .card:hover .card-content > *:not(.card-title),
+    .card:focus-within .card-content > *:not(.card-title) {
+        opacity:1;
+        transition-delay: 500ms;
+    }
+}
+
+
+.block1 .card{
+    background: rgb(80,0,51);
+    background: linear-gradient(45deg, rgba(80,0,51,1) 0%, rgba(168,0,85,1) 35%, rgba(255,0,119,1) 100%);
+}
+
+.button1{
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+    background-color: rgba(255,0,119,1);
+    color: white;
+    padding: 0.5rem 1.25rem;
+    border-radius: .25rem;
+}
+
+.button1:hover{
+    color: rgba(255,0,119,1);
+    background-color: white;
+}
+
+.block2 .card{
+    background: rgb(0,80,29);
+    background: linear-gradient(45deg, rgba(0,80,29,1) 0%, rgba(0,168,49,1) 35%, rgba(0,255,68,1) 100%);
+}
+
+.button2{
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+    background-color: rgba(0,168,49,1);
+    color: white;
+    padding: 0.5rem 1.25rem;
+    border-radius: .25rem;
+}
+
+.button2:hover{
+    color: rgba(0,168,49,1);
+    background-color: white;
+}
+
+.block3 .card{
+    background: rgb(48,0,80);
+    background: linear-gradient(45deg, rgba(48,0,80,1) 0%, rgba(88,0,168,1) 35%, rgba(128,0,255,1) 100%);
+}
+
+.button3{
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+    background-color: rgba(128,0,255,1);
+    color: white;
+    padding: 0.5rem 1.25rem;
+    border-radius: .25rem;
+}
+
+.button3:hover{
+    color: rgba(128,0,255,1);
+    background-color: white;
+}
+
+.block4 .card{
+    background: rgb(0,0,80);
+    background: linear-gradient(45deg, rgba(0,0,80,1) 0%, rgba(0,26,168,1) 35%, rgba(0,51,255,1) 100%);
+}
+
+.button4{
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+    background-color: rgba(0,51,255,1);
+    color: white;
+    padding: 0.5rem 1.25rem;
+    border-radius: .25rem;
+}
+
+.button4:hover{
+    color: rgba(0,51,255,1);
+    background-color: white;
+}
+
+.block5 .card{
+    background: rgb(85,77,0);
+    background: linear-gradient(45deg, rgba(85,77,0,1) 0%, rgba(170,78,0,1) 35%, rgba(255,78,0,1) 100%);
+}
+
+.button5{
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+    background-color: rgba(255,78,0,1);
+    color: white;
+    padding: 0.5rem 1.25rem;
+    border-radius: .25rem;
+}
+
+.button5:hover{
+    color: rgba(255,78,0,1);
+    background-color: white;
+}
+
+.block6 .card{
+    background: rgb(101,0,0);
+    background: linear-gradient(45deg, rgba(101,0,0,1) 0%, rgba(167,0,0,1) 35%, rgba(232,0,0,1) 100%);
+}
+
+.button6{
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+    background-color: rgba(232,0,0,1);
+    color: white;
+    padding: 0.5rem 1.25rem;
+    border-radius: .25rem;
+}
+
+.button6:hover{
+    color: rgba(232,0,0,1);
+    background-color: white;
 }
