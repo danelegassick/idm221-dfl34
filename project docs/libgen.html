@@ -9,60 +9,40 @@
     <link rel="stylesheet" href="../css/lib-gen.css">
 </head>
 <body>
-   <!--<header>
-        <div class="header-page">
-            
-            <div class="menu">
-                <ul>
-                    <li>Dane</li>
-                    <li>About</li>
-                    <li>Projects</li>
-                    <li>Contact</li>
-                </ul>
-            </div>
+    <header>
 
-        </div>
-    </header>-->
+        <h1 class="logo">Dane</h1>
+    
+        <input type="checkbox" id="nav-toggle" class="nav-toggle">
+    
+        <nav>
+            <ul>
+                <li><a href="../projects.html">Projects</a></li>
+                <li><a href="./about.html">About</a></li>
+                <li><a href="./resume.html">Resume</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    
+        <label for="nav-toggle" class="nav-toggle-label">
+            <span></span>
+        </label>
+    
+    </header>
 
-    <main>
+    <main class="project-main">
 
-        <div class="layout-structure">
+            <div class="h1-container">   
 
-            <div class="sidebar">
-
-                <div class="sidebar-name">
-                    <h2><a href="../home.html">DANE</a></h2>
-                </div>
-
-                <h3><a href="../about.html">About</a></h3>
-
-                <h3><a href="../contact.html">Contact</a></h3>
-
-                <h3><a href="../resume.html">Resume</a></h3>
-
-                <h3><a href="../projects.html">Projects</a></h2>
-
-                <ul>
-                    <li><a href="3Dart.html">3D Art</a></li>
-                    <br>
-                    <li><a href="wire.html">Wire Redesign</a></li>
-                    <br>
-                    <li><a href="elevate.html">Elevate</a></li>
-                    <br>
-                    <li><a href="freshlock.html">FreshLock</a></li>
-                    <br>
-                    <li><a href="pipeline.html">Pipeline</a></li>
-                    <br>
-                </ul>
+                <h1 class="gradient-text">
+                    Library Genesis Redesign
+                </h1>
 
             </div>
 
-            <div class="text-structure">
-                <h1>Library Genesis Redesign</h1>
-                
-                <br>
+            <br>
 
-                <div class="text-container">
+            <div class="text-container">
                 
                 <H2>Why Even Do This?</H2>
 
@@ -70,11 +50,25 @@
                     This project was for a user interface design class, the prompt being that I needed to redesign a website of choice. Simple enough. I had recently been to Library Genesis in order to get one of my textbooks and thought "Hey, this site kind of sucks!" So, I set out towards the redesign process.
                 </p>
 
-                </div>
+            </div>
 
                 <br>
 
-                <div class="text-container">
+            <div class="text-container-inv">
+
+                <h2>The Before:</h2>
+
+                <img class="project-img" src="../graphics/libgen/screenshot2.gif" alt="original1">
+
+                <br>
+
+                <img class="project-img" src="../graphics/libgen/screenshot1.gif" alt="original2">
+
+            </div>
+
+            <br>
+
+            <div class="text-container-inv">
 
                 <h2>The Process:</h2>
 
@@ -99,6 +93,8 @@
 
                     Students often discover the site through referral or social media posts, which lines up with the college student demographic as 70% are shown to be on Snapchat or Instagram and social interaction in college increases significantly increasing the odds that someone will get a referral.
                 </p>
+
+                <img class="project-img" src="../graphics/libgen/card-sort.gif" alt="card-sort">
                 
                 <p>
                     The key components are the search bar, download section, upload section, and topics. These are the parts of the website that users need to find the necessary materials. Search allows people to find their books easily. The download and upload section are clearly meant for file sharing. People can use the topics section to narrow down their research goals and enable them to find content faster.
@@ -128,7 +124,7 @@
 
                 <br>
 
-                <div class="text-container">
+            <div class="text-container-inv">
 
                 <h3>Goals</h3>
 
@@ -144,65 +140,11 @@
                     The color palette and branding guide will help keep consistency on the site to build trust with the user, as sites that look like Library Genesis often attempt to download viruses with fake links.
                 </p>
 
-                </div>
-
             </div>
 
-            <div class="filler1">
-                <h2>Before:</h2>
+            <br>
 
-                <img src="../graphics/libgen/screenshot2.gif" alt="original1">
-
-                <br>
-
-                <img src="../graphics/libgen/screenshot1.gif" alt="original2">
-
-                <br>
-
-                <img src="../graphics/libgen/card-sort.gif" alt="card-sort">
-
-                <br>
-
-
-
-
-            </div>
-
-            <div class="filler2">
-
-                <img src="../graphics/libgen/Site-Map.gif" alt="site-map">
-
-                <br>
-
-                <img src="../graphics/libgen/HomeWireframe.gif" alt="home-wireframe">
-
-                <br>
-
-                <img src="../graphics/libgen/SearchWireframe.gif" alt="search-wireframe">
-
-                <br>
-
-                <img src="../graphics/libgen/text-example.gif" alt="text-ex">
-
-                <br>
-
-                <img src="../graphics/libgen/FINAL-COLORS.gif" alt="colors">
-
-                <br>
-
-                <img src="../graphics/libgen/HOME.gif" alt="home-final">
-
-                <br>
-
-                <img src="../graphics/libgen/SEARCH-RESULTS.gif" alt="search-final">
-
-                <br>
-
-            </div>
-
-            <div class="filler3">
-
-                <div class="text-container">
+            <div class="text-container-inv">
 
                 <h3>Card Sort & Site Map</h3>
 
@@ -241,17 +183,21 @@
                     This gave me very clear feedback for what the site map should and should not contain. Aspects such as Russian Translation and Last Added were determined to be useless by the testers because not only would it not help them find what they are looking for giving me insight on what should be removed from the final site map. The categories were arranged in a way that made it very easy to find what the user is looking for whether it is algebra, uploading files, or donating. To the left, the full map can be viewed as based on the average responses to the card sort activity.
                 </p>
 
-                </div>
+            </div>
 
                 <br>
 
-                <div class="text-container">
+            <div class="text-container-inv">
 
                 <h3>Wireframes, Typography and Color Styles</h3>
+
+                <img class="project-img" src="../graphics/libgen/HomeWireframe.gif" alt="home-wireframe">
 
                 <p>
                     The home page was redesigned to greatly simplify and condense the amount of information, while still providing options to define the user’s search further. By having the logo centered above the search bar, the site is more reminiscent of a common search engine providing familiarity to the site. The menu was condensed into 3 options via the card sort clearing space for the search area. However in this wireframe, the newly found space was not utilized as the menu is very large compared to the search area in the center. The extra logo in the corner was unnecessary. The search bar was too thin as the current wireframe has it crushed between two larger pieces. These were accounted for in the final prototype.
                 </p>
+
+                <img class="project-img" src="../graphics/libgen/SearchWireframe.gif" alt="search-wireframe">
 
                 <p>
                     The search results page was redesigned to have a more modern and blocky look, as the original site has very linear search results. This was intentionally to separate the different books, as if you were looking through a library. 
@@ -277,11 +223,18 @@
                     The fonts chosen were Merriweather Bold for the header text and Open Sans Light for the body copy. The contrast between the serif headers and sans-serif copy helps the user distinguish hierarchy of text on the website. As the header font, Merriweather Bold catches the eye because of its boldness and the serifs hanging off of the letters. The copy font, Open Sans Light, provides a simple, well-kerned option that provides enough visibility to be readable while not being the main attraction due to its size and light font weight.
                 </p>
 
-                </div>
+
+                <img class="project-img" src="../graphics/libgen/text-example.gif" alt="text-ex">
 
                 <br>
 
-                <div class="text-container">
+                <img class="project-img" src="../graphics/libgen/FINAL-COLORS.gif" alt="colors">
+
+            </div>
+
+                <br>
+
+            <div class="text-container-inv">
 
                 <h3>Changes From What Was Proposed</h3>
 
@@ -309,11 +262,17 @@
                     The blue and maroon worked as accents, while the bright red worked as the main color to keep the site lively. The contrast between the red and blue also provided eye-catching attention of the areas of interest.
                 </p>
 
-                </div>
+                <img class="project-img" src="../graphics/libgen/HOME.gif" alt="home-final">
 
                 <br>
 
-                <div class="text-container">
+                <img class="project-img" src="../graphics/libgen/SEARCH-RESULTS.gif" alt="search-final">
+
+            </div>
+
+                <br>
+
+            <div class="text-container-inv">
 
                 <h3>Conclusion</h3>
 
@@ -333,11 +292,11 @@
                     The changes made to Library Genesis redefined it as a modern search engine with a friendly and trustworthy feeling. By using slightly rounded corners, stylized text and colors, and sophisticated iconography, the site appears safer than the average bare bones HTML sites that attempt to have malicious intent. All changes were focused benefitting both the user through building trust and the site owners by pushing the donation section on every page with the footer. Overall, the site shifted from a search engine that seemed like it could install a virus onto the users computer to a site that is designed for students to have access to free educational materials in a safe and efficient way.
                 </p>
 
-                </div>
+            </div>
 
                 <br>
 
-                <div class="text-container">
+            <div class="text-container">
 
                 <h3>How am I learning from this?</h3>
 
@@ -349,12 +308,90 @@
                     In following projects, I have utilized card sorts, wireframe critiques, style guides, and how to assess the main goals of a site. The process became something I worked my way through, rather than just reading it on paper. And pretty much everything I learned in  this project has turned out to be crucial in my following projects. 
                 </p>
 
-                </div>
-
-
             </div>
 
-        </div>
+            <br>
+
+            <br>
+
+            <div class="options">
+
+                <div class="more-projects">
+
+                    <h1>View Other Projects:</h2>
+
+                </div>
+                
+                <div class="block2">
+            
+                    <div class="card" id="card-freshlock">
+                        <div class="card-content">
+                        <h2 class="card-title">FreshLock</h2>
+                
+                        <p class="card-body">FreshLock is a design-thinking project working to solve problems of food waste in the home.</p>
+                
+                        <a href="./project docs/freshlock.html" class="button2">View Project</a>
+                        </div>
+                    </div>
+            
+                </div>
+            
+                <div class="block3">
+            
+                    <div class="card">
+                        <div class="card-content">
+                        <h2 class="card-title">Elevate</h2>
+                
+                        <p class="card-body">Elevate is an app design for a focus and productivity app designed to give back to the community.</p>
+                
+                        <a href="./project docs/elevate.html" class="button3">View Project</a>
+                        </div>
+                    </div>
+            
+                </div>
+
+                <div class="block4">
+
+                    <div class="card">
+                        <div class="card-content">
+                        <h2 class="card-title">Wire Redesign</h2>
+                
+                        <p class="card-body">Wire magazine has great in print graphics, but their site doesn't reflect that. See the redesign!</p>
+                
+                        <a href="./project docs/wire.html" class="button4">View Project</a>
+                        </div>
+                    </div>
+            
+                </div>
+            
+                <div class="block5">
+            
+                    <div class="card">
+                        <div class="card-content">
+                        <h2 class="card-title">Pipeline</h2>
+                
+                        <p class="card-body">Pipeline is a business pitch for a social network of surfers to share videos and compete at beaches.</p>
+                
+                        <a href="./project docs/pipeline.html" class="button5">View Project</a>
+                        </div>
+                    </div>
+            
+                </div>
+            
+                <div class="block6">
+            
+                        <div class="card">
+                            <div class="card-content">
+                            <h2 class="card-title">3D Art</h2>
+                    
+                            <p class="card-body">Some of my favorite pieces from the last year that I have mocked up in Blender or Spark AR.</p>
+                    
+                            <a href="./project docs/3Dart.html" class="button6">View Project</a>
+                            </div>
+                        </div>
+            
+                </div>
+            </div>
 
     </main>
     
