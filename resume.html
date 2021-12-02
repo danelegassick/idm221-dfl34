@@ -1,4 +1,4 @@
-<!DOCTYPE html5>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -7,31 +7,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resume</title>
     <link rel="stylesheet" href="css/master.css">
+    <script src="./js/functions.js"></script>
 </head>
 
 <body>
 
     <header>
 
-        <div class="grid-header">
-
-            <div class="header-25">
-                <ul>
-                    <li><a href="./index.html" class="link-style">DANE</a></li>
-                </ul>
+        <div class="topnav">
+    
+            <a href="./index.html" class="link-style">DANE</a>
+    
+            <div id="myLinks">
+              <a href="./projects.html" class="link-style">PORTFOLIO</a>
+              <a href="./contact.html" class="link-style">CONTACT</a>
+              <a href="./about.html" class="link-style">ABOUT</a>
+              <a href="./resume.html" class="link-style">RESUME</a>
             </div>
-
-            <div class="header-75">
-                <ul>
-                    <li><a href="./projects.html" class="link-style">Portfolio</a></li>
-                    <li><a href="./about.html" class="link-style">About</a></li>
-                    <li><a href="./contact.html" class="link-style">Contact</a></li>
-                    <li><a href="./resume.html" class="link-style">Resume</a></li>
-                </ul>
-            </div>
-
-        </div>
-
+    
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+              <img src="./graphics/hamburger.gif" alt="menu" class="hamburger-menu">
+            </a>
+          </div>
+    
     </header>
 
     <main class="resume-page">
@@ -49,12 +47,10 @@
                 <h2>Dane LeGassick</h2>
 
                 <ul>
-                    <address>
-                        <li>3400 Lancaster Ave</li>
-                        <li>Apt. 2409</li>
-                        <li>Philadelphia, Pennsylvania</li>
-                        <li>19104</li>
-                    </address>
+                    <li>3400 Lancaster Ave</li>
+                    <li>Apt. 2409</li>
+                    <li>Philadelphia, Pennsylvania</li>
+                    <li>19104</li>
                     <li><a href="tel:+1-661-388-1292" class="link-style">(661) 388-1292</a></li>
                     <li><a href="mailto:dfl34@drexel.edu" class="link-style">dfl34@drexel.edu</a></li>
                 </ul>
@@ -170,7 +166,7 @@
 
                         <p><b>Global Prep Academy</b></p>
 
-                        <p>Web Designer/Project Manager</p>
+                        <p>Web Designer / Project Manager</p>
 
                     </div>
 
@@ -254,17 +250,15 @@
 
                     <ul class="grid-list">
 
-                        <div class="half">
-                            <li><a href="./project docs/libgen.html" class="link-style">Library Genesis</a></li>
-                            <li><a href="./project docs/wire.html" class="link-style">Wire Redesign</a></li>
-                            <li><a href="./project docs/elevate.html" class="link-style">Elevate</a></li>
-                        </div>
+                        
+                            <li><a href="./project-docs/libgen.html" class="link-style">Library Genesis</a></li>
+                            <li><a href="./project-docs/wire.html" class="link-style">Wire Redesign</a></li>
+                            <li><a href="./project-docs/elevate.html" class="link-style">Elevate</a></li>
 
-                        <div class="half">
-                            <li><a href="./project docs/freshlock.html" class="link-style">FreshLock</a></li>
-                            <li><a href="./project docs/3Dart.html" class="link-style">3D Art</a></li>
-                            <li><a href="./project docs/pipeline.html" class="link-style">Pipeline</a></li>
-                        </div>
+                        
+                            <li><a href="./project-docs/freshlock.html" class="link-style">FreshLock</a></li>
+                            <li><a href="./project-docs/3Dart.html" class="link-style">3D Art</a></li>
+                            <li><a href="./project-docs/pipeline.html" class="link-style">Pipeline</a></li>
 
                     </ul>
 
@@ -277,7 +271,8 @@
                     <ul>
                         <li><a href="mailto:dfl34@drexel.edu" class="link-style">dfl34@drexel.edu</a></li>
                         <li><a href="tel:661-388-1292" class="link-style">(661) 388-1292</a></li>
-                        <li><a href="https://www.linkedin.com/in/dane-legassick-776290195/#" class="link-style" target="_blank">LinkedIn</a></li>
+                        <li><a href="https://www.linkedin.com/in/dane-legassick-776290195/#" class="link-style"
+                                target="_blank">LinkedIn</a></li>
                     </ul>
 
                 </div>
@@ -287,7 +282,8 @@
                     <h2>About Me</h2>
 
                     <p>My name is Dane LeGassick. I’m currently a second-year student attending Drexel
-                        University studying user experience interaction design. I'm a web designer and developer, and this site was developed by me!</p>
+                        University studying user experience interaction design. I'm a web designer and developer, and
+                        this site was developed by me!</p>
 
                 </div>
 

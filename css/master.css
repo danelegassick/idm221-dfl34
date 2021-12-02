@@ -307,7 +307,7 @@ h3 {
 footer {
     background-color: #343434;
     color: white;
-    font-size: 1rem;
+    font-size: .875rem;
     padding: 1rem;
     box-shadow: 0 -5px 5px #2b2b2b74;
     position: relative;
@@ -395,51 +395,63 @@ footer p {
 
 /*START HEADER */
 
-.grid-header {
-    display: grid;
-    grid-template-columns: .1fr .9fr;
-    width: 90%;
-    margin: 0 auto;
-}
-
-.grid-header .header-75 ul{
-    text-align: right;
-    list-style: none;
-    padding-left: 0;
-}
-
-.grid-header .header-25 ul{
-    text-align: left;
-    list-style: none;
-    padding-left: 0;
-}
-
-.grid-header ul li{
-    display: inline-block;
-    padding: 1rem;
-}
-
-header .link-style {
-    font-size: 1.75rem;
-    text-transform: uppercase;
-}
-
-header {
-    background: rgb(247, 247, 247);
-    text-align: center;
-    width: 100%;
+/* Style the navigation menu */
+.topnav {
+    overflow: hidden;
     position: relative;
-    box-shadow: 0px 5px 5px #2b2b2b74;
+  }
+  
+  /* Hide the links inside the navigation menu (except for logo/home) */
+.topnav #myLinks {
+    display: none;
+    margin: 1rem 0;
+    width: 100%;
+  }
+
+.topnav #myLinks a {
+    text-align: center;
+    display: block;
 }
 
-@media only screen and (max-width:700px) {
+  
+  /* Style navigation menu links */
+.topnav a {
+    margin: 1rem 1rem;
+    text-decoration: none;
+    font-size: 1.75rem;
+    display: block;
+  }
+  
+  /* Style the hamburger menu */
+.topnav a.icon {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  
+  /* Add a grey background color on mouse-over */
+  
+  /* Style the active link (or home/logo) */
 
-    .grid-header .link-style{
-        font-size: 1rem;
+.hamburger-menu {
+      width: 40px;
+      height: auto;
+      position: absolute;
+      right: 0;
+      top: 0;
+  }
+
+.topnav .link-style {
+        font-family: 'Redwing';
+        color: #343434;
+        width: fit-content;
+        text-decoration: none;
+        border-bottom: .125em solid #B391E6;
+        box-shadow: inset 0 -0.125em 0 #B391E6;
+        transition: box-shadow 300ms cubic-bezier(0.77, 0, 0.175, 1), color 300ms cubic-bezier(0.77, 0, 0.175, 1), text-decoration 300ms ease;
     }
-
-}    
-
+    
 
 /* END HEADER STYLES*/
 
@@ -845,8 +857,6 @@ input[type=submit]:hover {
     font-family: Helvetica, sans-serif;
 }
 
-
-
 .body-text ul{
     list-style: circle;
     margin: .25;
@@ -883,8 +893,13 @@ input[type=submit]:hover {
     margin: 0 auto;
 }
 
-.intro iframe {
+.elevate-video {
     margin-top: 1rem;
     width: 100%;
     height: 500px;
+}
+
+.pipeline-video {
+    margin-top: 1rem;
+    width: 100%;
 }

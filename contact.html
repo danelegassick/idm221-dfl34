@@ -1,4 +1,4 @@
-<!DOCTYPE html5>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -7,31 +7,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact</title>
     <link rel="stylesheet" href="css/master.css">
+    <script src="./js/functions.js"></script>
 </head>
 
 <body>
 
     <header>
 
-        <div class="grid-header">
-
-            <div class="header-25">
-                <ul>
-                    <li><a href="./index.html" class="link-style">DANE</a></li>
-                </ul>
+        <div class="topnav">
+    
+            <a href="./index.html" class="link-style">DANE</a>
+    
+            <div id="myLinks">
+              <a href="./projects.html" class="link-style">PORTFOLIO</a>
+              <a href="./contact.html" class="link-style">CONTACT</a>
+              <a href="./about.html" class="link-style">ABOUT</a>
+              <a href="./resume.html" class="link-style">RESUME</a>
             </div>
-
-            <div class="header-75">
-                <ul>
-                    <li><a href="./projects.html" class="link-style">Portfolio</a></li>
-                    <li><a href="./about.html" class="link-style">About</a></li>
-                    <li><a href="./contact.html" class="link-style">Contact</a></li>
-                    <li><a href="./resume.html" class="link-style">Resume</a></li>
-                </ul>
-            </div>
-
-        </div>
-
+    
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+              <img src="./graphics/hamburger.gif" alt="menu" class="hamburger-menu">
+            </a>
+          </div>
+    
     </header>
 
     <main class="contact-page">
@@ -47,19 +45,19 @@
 
                 <div class="container">
 
-                    <label for="FName">First Name</label>
+                    <label>First Name</label>
                     <input type="text" class="fname" name="firstname" placeholder="Your name..">
 
-                    <label for="LName">Last Name</label>
+                    <label>Last Name</label>
                     <input type="text" class="lname" name="lastname" placeholder="Your last name..">
 
-                    <label for="email">Email</label>
+                    <label>Email</label>
                     <input type="email" class="email" name="email" placeholder="Your email..">
 
-                    <label for="subject">Subject</label>
+                    <label>Subject</label>
                     <textarea class="subject" name="subject" placeholder="Write something.."></textarea>
 
-                    <label for="message">Message</label>
+                    <label>Message</label>
                     <textarea class="message" name="message" placeholder="Write something.."></textarea>
 
                     <input type="submit" value="Submit" class="button">
@@ -79,6 +77,7 @@
     </main>
 
     <footer>
+
         <div class="container-footer">
 
             <div class="grid-footer">
@@ -89,17 +88,15 @@
 
                     <ul class="grid-list">
 
-                        <div class="half">
-                            <li><a href="./project docs/libgen.html" class="link-style">Library Genesis</a></li>
-                            <li><a href="./project docs/wire.html" class="link-style">Wire Redesign</a></li>
-                            <li><a href="./project docs/elevate.html" class="link-style">Elevate</a></li>
-                        </div>
+                        
+                            <li><a href="./project-docs/libgen.html" class="link-style">Library Genesis</a></li>
+                            <li><a href="./project-docs/wire.html" class="link-style">Wire Redesign</a></li>
+                            <li><a href="./project-docs/elevate.html" class="link-style">Elevate</a></li>
 
-                        <div class="half">
-                            <li><a href="./project docs/freshlock.html" class="link-style">FreshLock</a></li>
-                            <li><a href="./project docs/3Dart.html" class="link-style">3D Art</a></li>
-                            <li><a href="./project docs/pipeline.html" class="link-style">Pipeline</a></li>
-                        </div>
+                        
+                            <li><a href="./project-docs/freshlock.html" class="link-style">FreshLock</a></li>
+                            <li><a href="./project-docs/3Dart.html" class="link-style">3D Art</a></li>
+                            <li><a href="./project-docs/pipeline.html" class="link-style">Pipeline</a></li>
 
                     </ul>
 
@@ -131,6 +128,7 @@
             </div>
 
         </div>
+
     </footer>
 
 </body>
