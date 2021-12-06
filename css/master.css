@@ -18,7 +18,7 @@ body {
 /*HOME PAGE CSS*/
 
 .home {
-    margin: 4rem 1rem;
+    margin: 2rem 1rem;
     background-color: whitesmoke;
 }
 
@@ -93,18 +93,18 @@ h3 {
     box-shadow: 5px 5px 10px #34343477;
 }
 
-.intro {
+.intro-home {
     width: fit-content;
     border-bottom: #6622CC solid 5px;
 }
 
-.intro h1 {
+.intro-home h1 {
     font-size: 4rem;
     margin: 1rem 0;
     padding: 0;
 }
 
-.intro p {
+.intro-home p {
     margin: 1rem 0;
     padding: 0;
     font-size: 2rem;
@@ -246,6 +246,7 @@ h3 {
 }
 
 .button  {
+    font-family: 'Redwing';
     background-color: #6622CC; /* purple */
     border: none;
     color: white;
@@ -395,7 +396,6 @@ footer p {
 
 /*START HEADER */
 
-/* Style the navigation menu */
 .topnav {
     overflow: hidden;
     position: relative;
@@ -510,7 +510,7 @@ input[type=submit]:hover {
 }
 
 .contact-page {
-    margin-top: 3rem;
+    margin-top: 1rem;
 }
 
 .contact-page h1 {
@@ -578,7 +578,7 @@ input[type=submit]:hover {
 /* PROJECT STYLES */
 
 .projects-page {
-    margin: 3rem 0;
+    margin: 1rem 0 3rem;
 }
 
 .projects-h1 h1{
@@ -590,7 +590,7 @@ input[type=submit]:hover {
 }
 
 .projects-h1 {
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
 }
 
@@ -700,7 +700,7 @@ input[type=submit]:hover {
 /*START RESUME PAGE*/
 
 .resume-page {
-    margin: 3rem 0;
+    margin: 1rem 0 3rem;
 }
 
 .resume-page p{
@@ -895,4 +895,23 @@ input[type=submit]:hover {
 .pipeline-video {
     margin-top: 1rem;
     width: 100%;
+}
+
+/* 3D PAGE STYLES BEGIN */
+
+.art-grid {
+    display: grid;
+    margin: 1rem auto;
+    width: 90%;
+    gap: 1rem;
+}
+
+.area {
+    width: 100%;
+}
+
+.art-img {
+    width: 100%;
+    border-radius: .5rem;
+    box-shadow: 0px 5px 10px #34343477;
 }
