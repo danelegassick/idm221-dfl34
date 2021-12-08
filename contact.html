@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact</title>
+    <link rel="shortcut icon" href="./graphics/favicon.gif"/>
     <link rel="stylesheet" href="css/master.css">
     <script src="./js/functions.js"></script>
 </head>
@@ -15,21 +16,21 @@
     <header>
 
         <div class="topnav">
-    
+
             <a href="./index.html" class="link-style">DANE</a>
-    
+
             <div id="myLinks">
-              <a href="./projects.html" class="link-style">PORTFOLIO</a>
-              <a href="./contact.html" class="link-style">CONTACT</a>
-              <a href="./about.html" class="link-style">ABOUT</a>
-              <a href="./resume.html" class="link-style">RESUME</a>
+                <a href="./projects.html" class="link-style">PORTFOLIO</a>
+                <a href="./contact.html" class="link-style">CONTACT</a>
+                <a href="./about.html" class="link-style">ABOUT</a>
+                <a href="./resume.html" class="link-style">RESUME</a>
             </div>
-    
+
             <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-              <img src="./graphics/hamburger.gif" alt="menu" class="hamburger-menu">
+                <img src="./graphics/hamburger.gif" alt="menu" class="hamburger-menu">
             </a>
-          </div>
-    
+        </div>
+
     </header>
 
     <main class="contact-page">
@@ -37,7 +38,7 @@
         <div class="contact-h1">
             <h1>Contact</h1>
         </div>
-        
+
 
         <div class="grid-contact">
 
@@ -45,22 +46,29 @@
 
                 <div class="container">
 
-                    <label>First Name</label>
-                    <input type="text" class="fname" name="firstname" placeholder="Your name..">
+                    <!--WORKING FORM SET UP NO PHP, FORM DATA SENT TO MY EMAIl (if you are reading this send me a message i'll hit you back)-->
 
-                    <label>Last Name</label>
-                    <input type="text" class="lname" name="lastname" placeholder="Your last name..">
+                    <form action="https://formspree.io/f/xdoboobl" method="POST">
 
-                    <label>Email</label>
-                    <input type="email" class="email" name="email" placeholder="Your email..">
+                        <label>
 
-                    <label>Subject</label>
-                    <textarea class="subject" name="subject" placeholder="Write something.."></textarea>
+                            Your email:
 
-                    <label>Message</label>
-                    <textarea class="message" name="message" placeholder="Write something.."></textarea>
+                            <input type="email" name="_replyto">
 
-                    <input type="submit" value="Submit" class="button">
+                        </label>
+
+                        <label>
+
+                            Your message:
+
+                            <textarea name="message"></textarea>
+
+                        </label>
+
+                        <button type="submit" class="button">SEND</button>
+
+                    </form>
 
                 </div>
 
@@ -88,15 +96,15 @@
 
                     <ul class="grid-list">
 
-                        
-                            <li><a href="./project-docs/libgen.html" class="link-style">Library Genesis</a></li>
-                            <li><a href="./project-docs/wire.html" class="link-style">Wire Redesign</a></li>
-                            <li><a href="./project-docs/elevate.html" class="link-style">Elevate</a></li>
 
-                        
-                            <li><a href="./project-docs/freshlock.html" class="link-style">FreshLock</a></li>
-                            <li><a href="./project-docs/3Dart.html" class="link-style">3D Art</a></li>
-                            <li><a href="./project-docs/pipeline.html" class="link-style">Pipeline</a></li>
+                        <li><a href="./project-docs/libgen.html" class="link-style">LibGen</a></li>
+                        <li><a href="./project-docs/wire.html" class="link-style">Wire</a></li>
+                        <li><a href="./project-docs/elevate.html" class="link-style">Elevate</a></li>
+
+
+                        <li><a href="./project-docs/freshlock.html" class="link-style">FreshLock</a></li>
+                        <li><a href="./project-docs/3Dart.html" class="link-style">3D Art</a></li>
+                        <li><a href="./project-docs/pipeline.html" class="link-style">Pipeline</a></li>
 
                     </ul>
 

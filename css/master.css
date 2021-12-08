@@ -15,46 +15,6 @@ body {
     background-color: whitesmoke;
 }
 
-/*HOME PAGE CSS*/
-
-.home {
-    margin: 2rem 1rem;
-    background-color: whitesmoke;
-}
-
-h1 {
-    font-family: 'Redwing';
-}
-
-h2 {
-    font-family: 'Redwing';
-    font-weight: lighter;
-}
-
-h3 {
-    font-family: 'Redwing';
-    font-weight: lighter;
-}
-
-.list-content ul {
-    list-style: none;
-    margin: 0;
-    line-height: 6.5rem;
-    margin-top: -2rem;
-}
-
-.list-content li a{
-    font-size: 2rem;
-    text-transform: uppercase;
-    font-family: 'Redwing';
-    font-weight: lighter;
-    padding: 0;
-}
-
-.img-content figure {
-    margin: 0;
-}
-
 .link-style {
     font-family: 'Redwing';
     color: #343434;
@@ -76,6 +36,52 @@ h3 {
     background: #B391E6;
     color: #fff;
     box-shadow: 8px 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+@font-face {
+    font-family: 'Redwing';
+    src: url('../fonts/redwing-medium-webfont.woff2') format('woff2');
+    src: url('../fonts/redwing-light-webfont.woff2') format('woff2');
+}
+
+h1 {
+    font-family: 'Redwing';
+}
+
+h2 {
+    font-family: 'Redwing';
+    font-weight: lighter;
+}
+
+h3 {
+    font-family: 'Redwing';
+    font-weight: lighter;
+}
+
+/*START HOME PAGE CSS*/
+
+.home {
+    margin: 2rem 1rem;
+    background-color: whitesmoke;
+}
+
+.list-content ul {
+    list-style: none;
+    margin: 0;
+    line-height: 6.5rem;
+    margin-top: -2rem;
+}
+
+.list-content li a{
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-family: 'Redwing';
+    font-weight: lighter;
+    padding: 0;
+}
+
+.img-content figure {
+    margin: 0;
 }
 
 .container {
@@ -109,7 +115,6 @@ h3 {
     padding: 0;
     font-size: 2rem;
     font-family: 'Redwing';
-    src: url('../fonts/redwing-light-webfont.woff2') format('woff2');
 }
 
 
@@ -122,10 +127,34 @@ h3 {
     margin: 2rem 0;
 }
 
-@font-face {
-    font-family: 'Redwing';
-    src: url('../fonts/redwing-medium-webfont.woff2') format('woff2');
-    src: url('../fonts/redwing-light-webfont.woff2') format('woff2');
+/* BACKGROUND COVER SCREEN ON MOBILE */
+
+@media only screen and (max-width: 700px) {
+    
+    .img-content {
+        display: none;
+    }
+
+    .home {
+        margin-top: 2rem;
+        background: url(../graphics/dane-x.gif) center center fixed;
+        background-size: cover;
+    }
+
+    .box {
+        margin-bottom: 0;
+    }
+
+    .list-content ul {
+        list-style: none;
+        padding-left: 0;
+    }
+
+    .img-content, .list-content {
+        float:none;
+        margin-bottom: 0; 
+    }
+
 }
 
 /*FINISH HOME PAGE*/
@@ -137,6 +166,10 @@ h3 {
 
 .about {
     background-color: whitesmoke;
+}
+
+.about p {
+    line-height: 2rem;
 }
 
 .about h1 {
@@ -162,7 +195,7 @@ h3 {
 }
 
 .about main {
-    margin: 5rem 0;
+    margin: 2rem 0;
 }
 
 .about .about-content {
@@ -189,7 +222,6 @@ h3 {
 
 .about a{
     font-size: 2rem;
-    text-transform: uppercase;
     font-family: 'Redwing';
     font-weight: lighter;
 }
@@ -204,7 +236,7 @@ h3 {
 .about-facts ul{
     list-style: circle;
     margin: 0;
-    line-height: 5rem;
+    line-height: 3rem;
 }
 
 .about-facts li {
@@ -368,15 +400,30 @@ footer .col-half {
     
 }
 
+@media only screen and (max-width:500px) {
+
+    .grid-footer {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "col-fourth1"
+        "col-fourth2"
+        "col-half";
+    }
+
+
+
+}
+
 footer .link-style {
-    font-size: .875rem;
+    font-size: 1.25rem;
     color: rgb(225, 225, 225);
     width: fit-content;
 }
 
 footer ul {
     list-style: none;
-    line-height: 2rem;
+    line-height: 3rem;
     padding-left: 0;
     padding-right: 0;
 }
@@ -700,7 +747,7 @@ input[type=submit]:hover {
 /*START RESUME PAGE*/
 
 .resume-page {
-    margin: 1rem 0 3rem;
+    margin: 1rem 0 2rem;
 }
 
 .resume-page p{
@@ -718,9 +765,13 @@ input[type=submit]:hover {
     width: 80%;
     margin: 0 auto;
     box-shadow: 0px 5px 10px #34343477;
-    padding: 1rem 2rem;
+    padding: .5rem 1rem;
     border-radius: 1rem;
     background-color: white;
+}
+
+.resume p {
+    font-size: 1rem;
 }
 
 .left {
@@ -749,7 +800,7 @@ input[type=submit]:hover {
     width: 80%;
     margin: 2rem auto;
     box-shadow: 0px 5px 10px #34343477;
-    padding: .5rem 2rem 1rem;
+    padding: .25rem 1rem 1rem;
     border-radius: 1rem;
     background-color: white;
 }
@@ -852,7 +903,6 @@ input[type=submit]:hover {
 
 .body-text ul{
     list-style: circle;
-    margin: .25;
     line-height: 1.5;
     width: 90%;
 }
@@ -865,7 +915,7 @@ input[type=submit]:hover {
 }
 
 .body-text {
-    margin-bottom: 1rem;
+    margin-bottom: 3rem;
 }
 
 .body-h2 {
