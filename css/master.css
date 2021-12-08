@@ -76,11 +76,11 @@ p {
     background-color: whitesmoke;
 }
 
-.list-content ul {
+.list-content .big {
     list-style: none;
     margin: 0;
-    line-height: 6.5rem;
-    margin-top: -2rem;
+    line-height: 5rem;
+    margin-top: -1.5rem;
 }
 
 .list-content li a{
@@ -136,6 +136,17 @@ p {
 
 .box {
     margin: 2rem 0;
+}
+
+.small {
+    line-height: 2.5rem;
+    margin-top: 0;
+    margin-left: 2rem;
+    
+}
+
+.small .link-style{
+    font-size: 1.25rem;
 }
 
 /* BACKGROUND COVER SCREEN ON MOBILE */
