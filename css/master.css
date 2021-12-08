@@ -6,6 +6,8 @@
 #B391E6 (LIGHT PURP), 
 #D6D6D6 (LIGHT GREY) */
 
+/*MAIN COMPONENTS*/
+
 * {
     box-sizing: border-box;
 }
@@ -57,6 +59,15 @@ h3 {
     font-family: 'Redwing';
     font-weight: lighter;
 }
+
+p {
+    font-family: Helvetica, Arial, sans-serif;
+    color: #343434;
+    line-height: 2.5rem;
+    font-size: 1.25rem;
+}
+
+/*END MAIN COMPONENTS*/
 
 /*START HOME PAGE CSS*/
 
@@ -157,7 +168,7 @@ h3 {
 
 }
 
-/*FINISH HOME PAGE*/
+/*END HOME PAGE*/
 
 
 
@@ -335,6 +346,8 @@ h3 {
     overflow: auto;
 }
 
+/*END ABOUT PAGE*/
+
 /*FOOTER*/
 
 footer {
@@ -410,9 +423,6 @@ footer .col-half {
         "col-fourth2"
         "col-half";
     }
-
-
-
 }
 
 footer .link-style {
@@ -441,7 +451,7 @@ footer p {
 
 /* END FOOTER */
 
-/*START HEADER */
+/* START NAV */
 
 .topnav {
     overflow: hidden;
@@ -493,15 +503,7 @@ footer p {
 }
     
 
-/* END HEADER STYLES*/
-
-
-p {
-    font-family: Helvetica, Arial, sans-serif;
-    color: #343434;
-    line-height: 2.5rem;
-    font-size: 1.25rem;
-}
+/* END NAV STYLES */
 
 /* START CONTACT STYLES */
 
@@ -947,6 +949,8 @@ input[type=submit]:hover {
     width: 100%;
 }
 
+/* END INDIVIDUAL PAGES */
+
 /* 3D PAGE STYLES BEGIN */
 
 .art-grid {
@@ -965,3 +969,5 @@ input[type=submit]:hover {
     border-radius: .5rem;
     box-shadow: 0px 5px 10px #34343477;
 }
+
+/* END 3D PAGE STYLES */
