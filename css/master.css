@@ -1055,6 +1055,32 @@ input[type=submit]:hover {
     grid-template-columns: 1fr;
 }
 
+.back-to-top {
+    text-transform: uppercase;
+    width: fit-content;
+    margin: 0rem auto 3rem;
+}
+
+.button-top  {
+    font-family: 'Redwing';
+    background-color: #6622CC; /* purple */
+    border: none;
+    color: white;
+    padding: 1rem 3rem;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.5rem;
+    border-radius: .2rem;
+    transition: background-color 220ms ease, color 220ms ease, text-decoration 220ms ease;
+}
+
+.button-top:hover {
+    background-color: #B391E6;
+    color: #ffffff;
+    text-decoration: underline;
+}
+
 @media only screen and (min-width: 1000px) {
 
     .intro {
