@@ -1125,6 +1125,12 @@ input[type=submit]:hover {
 
 /* 3D PAGE STYLES BEGIN */
 
+.intro iframe {
+    width: 100%;
+    height: 50vh;
+    margin: 1rem;
+}
+
 .art-grid {
     display: grid;
     margin: 2rem auto;
