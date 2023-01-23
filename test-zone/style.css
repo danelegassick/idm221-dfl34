@@ -1,0 +1,37 @@
+.test-wrap01 {
+    width: 80%;
+    margin: 0 auto 200px;
+  }
+  .test-wrap02 {
+    width: 50%;
+    margin: 0 auto 200px;
+  }
+  .test-wrap03 {
+    padding: 0 20%;
+    margin: 0 auto 200px;
+  }
+  
+  body {
+    margin: 0;
+    padding: 50px 0 0;
+  }
+  h1 {
+    text-align: center;
+    margin-bottom: 150px;
+    font-size: 36px;
+  }
+  strong {
+    font-size: 150%;
+  }
+  p {
+    margin-bottom: 200px;
+    font-size: 30px;
+    text-align: center;
+  }
+  img {
+    width: 100%;
+    height: auto;
+    vertical-align: top;
+  }
+  
+  
